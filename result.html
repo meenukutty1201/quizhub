@@ -1,0 +1,265 @@
+<html>
+<head>
+    <title>Quiz Hub</title>
+    <style>
+        body
+        {
+            background-image: url('frontpage1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .result
+        {
+            background-color: white;
+            width:60%;
+            height: 95%;
+            margin-top: 2%;
+            margin-left: 20%;
+        }
+
+        .result .text
+        {
+            font-size: 30px;
+            padding-top: 5%;
+            padding-left: 36%;
+            font-weight: bold;
+            font-family:cursive;
+        }
+
+        #name
+        {
+            font-size: 30px;
+            color: purple;
+            padding-left: 34%;
+            font-weight: bold;
+            margin-top: 1%;
+        }
+        button
+        {
+            background-color: purple;
+            color:white;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-left: 43%;
+        }
+
+        button a
+        {
+            text-decoration: none;
+            color:white;
+        } 
+
+        #quizanswers8 img
+        {
+           width: 50x;
+           height:50px;
+           
+        }
+
+        .ansersshown
+        {
+            margin-top: 4%;
+            margin-left: 30%;
+            font-weight: bold;
+            
+        }
+
+        #quizanswers1,#quizanswers2,#quizanswers3,#quizanswers4,#quizanswers5,#quizanswers6,#quizanswers7,#quizanswers8,#quizanswers9,#quizanswers10
+        {
+            margin-bottom: 3.5%;
+
+        }
+
+        #correct1
+        {
+            margin-left: 30%;
+        }
+
+        #correct2
+        {
+            margin-left: 26.1%;
+        }
+
+        #correct10
+        {
+          margin-left: 33%;
+        }
+
+        #correct8
+        {
+            margin-left: 28.3%;
+            margin-top: 5%;
+        }
+
+        #correct7
+        {
+            margin-left: 24%;
+        }
+        #correct5
+        {
+            margin-left: 39%;
+        }
+
+        #correct3
+        {
+           margin-left: 30.9%;
+        }
+
+        #correct6
+        {
+            margin-left: 22%;
+        }
+
+        
+
+        .first,.second,.third,.four,.five,.six,.seven,.eight,.nine,.ten
+        {
+            display: flex;
+            flex-direction: row;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="result">
+       
+        <div class="text">Congralutions!</div>
+        <div id="name"></div> 
+
+       <div class="ansersshown">
+
+       <div class="first">
+        <div id="quizanswers1"></div>
+        <div id="correct1"></div>
+        </div>
+
+        <div class="second">
+       <div id="quizanswers2"></div>
+       <div id="correct2"></div>
+        </div>
+
+        <div class="third">
+       <div id="quizanswers3"></div>
+       <div id="correct3"></div>
+        </div>
+
+        <div class="four">
+       <div id="quizanswers4"></div>
+       <div id="correct4"></div>
+        </div>
+
+        <div class="five">
+       <div id="quizanswers5"></div>
+       <div id="correct5"></div>
+        </div>
+
+       <div class="six">
+       <div id="quizanswers6"></div>
+       <div id="correct6"></div>
+        </div>
+
+        <div class="seven">
+       <div id="quizanswers7"></div>
+       <div id="correct7"></div>
+        </div>
+
+        <div class="eight">
+       <div id="quizanswers8"></div>
+       <div id="correct8"></div>
+        </div>
+
+        <div class="nine">
+       <div id="quizanswers9"></div>
+       <div id="correct9"></div>
+        </div>
+
+        <div class="ten">
+       <div id="quizanswers10"></div>
+       <div id="correct10"></div>
+        </div>
+      </div>
+
+       <button><a href="index.html">Back To Home</a></button>
+    </div>
+
+    <script>
+        const user = localStorage.getItem('UserName');
+        
+        var sessionString = sessionStorage.getItem('answers');
+        var Answers = JSON.parse(sessionString);
+        var quizanswers1=Answers[0];
+        console.log(Answers[0]);
+        console.log(user);
+        console.log(quizanswers1);
+         console.log(document.getElementById('quizanswers1'));
+        document.getElementById('quizanswers1').innerHTML=quizanswers1;
+    
+        var quizanswers2=Answers[1];
+        console.log(quizanswers2);
+         console.log(document.getElementById('quizanswers2'));
+        document.getElementById('quizanswers2').innerHTML=quizanswers2;
+
+        var quizanswers3=Answers[2];
+        console.log(quizanswers3);
+         console.log(document.getElementById('quizanswers3'));
+        document.getElementById('quizanswers3').innerHTML=quizanswers3;
+
+        var quizanswers4=Answers[3];
+        console.log(quizanswers4);
+         console.log(document.getElementById('quizanswers4'));
+        document.getElementById('quizanswers4').innerHTML=quizanswers4;
+
+
+        
+
+        var nameuser=user;
+        console.log(nameuser);
+        document.getElementById('name').innerHTML=nameuser;
+
+        document.getElementById('correct1');
+        console.log(correct1);
+
+
+        if(quizanswers1=="Shajahan")
+        {
+          document.getElementById('correct1').innerHTML="Correct"
+          correct1.style.color="green";
+        }
+
+        else
+        {
+            document.getElementById('correct1').innerHTML="Wrong"
+            correct1.style.color="red";
+        }
+
+
+        if(quizanswers2=="Appadi Podu")
+        {
+          document.getElementById('correct2').innerHTML="Correct"
+          correct2.style.color="green";
+        }
+
+        else
+        {
+            document.getElementById('correct2').innerHTML="Wrong"
+            correct2.style.color="red";
+        }
+
+        if(quizanswers3=="Thalaiva")
+        {
+          document.getElementById('correct3').innerHTML="Correct"
+          correct3.style.color="green";
+        }
+
+        else
+        {
+            document.getElementById('correct3').innerHTML="Wrong"
+            correct3.style.color="red";
+        }
+
+        
+
+    
+    </script>
+    </body>
+    </html>
